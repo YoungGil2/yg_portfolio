@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,CAAE;EAAC,MAAM,EAAE,GAAG;EAAE,OAAO,EAAE,GAAG;;AAC5B,IAAK;EACJ,gBAAgB,EAAE,KAAK",
+"sources": ["record_modify.scss"],
+"names": [],
+"file": "record_modify.css"
+}

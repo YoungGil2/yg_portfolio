@@ -1,0 +1,383 @@
+* { margin: 0px; padding: 0px;}
+li { list-style: none;}
+@mixin font($size,$color){
+	font-size: $size;
+	color: $color;
+}
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+header {
+	& .top_menu {
+		margin-top: 50px;
+		width: 100%;
+		height: 70px;
+		& .top_menu_div {
+			line-height: 60px;
+			text-align: center;
+		}
+		& .top_menu_logo {
+			width: 15%;
+			height: 60%;
+			float: left;
+			margin-left: 50px;
+			margin-top: 10px;
+			@include font(2em,black);
+			& img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		& .top_menu_cart_open {
+			width: 10%;
+			height: 100%;
+			float: left;
+			margin-left: 60%;
+			@include font(1.3em,black);
+			cursor: pointer;
+		}
+	}
+}// header
+section {
+	article {
+		// 상품
+		& .shopping_product {
+			width: 100%;
+			height: 830px;
+			border-top: 2px solid black;
+			border-bottom: 2px solid black;
+			& li {
+				height: 100%;
+				float: left;	
+			}
+			// 상품 이미지 박스
+			& .shopping_product_image_frame {
+				margin-left: 17.5%;
+				width: 40%;
+				& .shopping_product_image_frame_content {
+					width: 100%;
+					height: 70%;
+					& .product_image {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+				& .shopping_product_image_frame_sub_content {
+					width: 100%;
+					height: 15%;
+					& .shopping_product_image_frame_sub_content_s {
+						width: 17%;
+						height: 90%;
+						float: left;
+						margin-top: 0.7%;
+						margin-left: 2.5%;
+						& img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+					& .shopping_product_image_frame_sub_content_s:hover {
+						outline: 5px solid red;
+					}
+				}
+			}// 상품 이미지 박스
+			// 상품 설명 박스
+			& .shopping_product_description_frame {
+				width: 25%;
+				& .shopping_product_description {
+					width: 80%;
+					border-bottom: 2px solid #ccc;
+					margin: 20px auto;
+					// 상품명
+					& .shopping_product_description_h1 {
+						@include font(1.7em,black);
+						height: 100px;
+						border-bottom: 3px solid #525252;
+					}
+					
+					& .shopping_product_description_p {
+						width: 100%;
+						height: 40px;
+						& .shopping_product_description_title {
+							display: inline-block;
+							margin-top: 8px;
+							float: left;
+						}
+						& .shopping_product_description_sub_content {
+							display: inline-block;
+							@include font(0.8em,black);
+							margin-top: 11px;
+							margin-left: 30px;
+						}
+						& .shopping_product_description_content {
+							display: inline-block;
+							@include font(1.3em,black);
+							margin-top: 5px;
+							margin-left: 50px;
+						}
+					}
+				}
+				// 상품 사이즈 선택
+				& .shopping_product_size {
+					width: 100%;
+					height: 100px;
+					margin-top: 40px;
+					& .shopping_product_size_title {
+						margin-left: 40px;
+					}
+					& .shopping_product_size_menu {
+						width: 100%;
+						height: 50px;
+						margin-top: 25px;
+						margin-left: 8px;
+						& li {
+							outline: 1px solid #a8a8a8;
+							width: 10%;
+							height: 100%;
+							margin-left: 3.3%;
+							text-align: center;
+							line-height: 48px;
+							cursor: pointer;
+						}
+						& li:hover {
+							background-color: black;
+							color: white;
+						}
+					}
+				}
+				// 상품 선택 확인창 
+				& .shopping_product_check {
+					width: 90%;
+					height: 200px;
+					margin: 30px auto;
+					border: 1px solid #a8a8a8;
+					overflow: auto;
+					// 상품 선택 확인창 박스
+					& .shopping_product_check_content {
+						width: 100%;
+						height: 60px;
+						border-bottom: 1px solid #ccc;
+						& .product_number_p , .product_number_m {
+							cursor: pointer;
+						}
+						& .product_number {
+							width: 40px;
+							height: 40px;
+							outline: 1px solid #ccc;
+							float: left;
+							margin: 10px 5px;
+							text-align: center;
+							line-height: 37px;
+						}
+						& .shopping_product_check_content_size {
+							width: 50px;
+							height: 40px;
+							outline: 1px solid #ccc;
+							text-align: center;
+							line-height: 37px;
+							margin: 10px 20px;
+							float: left;
+						}
+						& .box_value {
+							width: 100px;
+							height: 100%;
+							margin-left: 10px;
+							text-align: right;
+							line-height: 55px;
+						}
+						& .box_value_won {
+							width: 20px;
+							height: 100%;
+							line-height: 55px;
+						}
+						& .remove_btn {
+							width: 30px;
+							height: 100%;
+							line-height: 55px;
+							text-align: center;
+							cursor: pointer;
+						}
+						& .remove_btn:hover {
+							color: red;
+						}
+					}// 상품 선택 확인창 박스
+				}// 상품 선택 확인창
+				& .shopping_product_value_box {
+					width: 250px;
+					height: 50px;
+					margin-left: 200px;
+					font-weight: bold;
+					text-align: center;
+					@include font(1.5em,black);
+				}
+				// 장바구니 담기
+				& .shopping_product_cart_input {
+					width: 80%;
+					height: 60px;
+					outline: 2px solid #ccc;
+					margin: 10px auto;
+					text-align: center;
+					cursor: pointer;
+					line-height: 55px;
+					@include font(1.5em,black);
+				}
+				& .shopping_product_cart_input:hover {
+					color: #8f95a3;
+				}
+			}// 상품 설명 박스
+		}// 장바구니
+		& .shopping_cart {
+			width: 500px;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			box-shadow: 12px 12px 12px 12px black;
+			background-color: #f5f5f5;
+			transition: all 1.0s;
+			display: none;
+			& .shopping_cart_title {
+				width: 100%;
+				height: 100px;
+				background-color: #525252;
+				line-height: 90px;
+				text-indent: 40px;
+				@include font(2em,white);
+				& .shopping_cart_close {
+					width: 50px;
+					height: 50px;
+					margin-left: 200px;
+					cursor: pointer;
+				}
+				& .shopping_cart_close:hover {
+					color: red;
+				}
+			}
+			& .shopping_cart_menu {
+				width: 100%;
+				height: 30px;
+				& li {
+					float: left;
+					text-align: center;
+					height: 100%;
+					line-height: 27px;
+				}
+				& .shopping_cart_info {
+					width: 25%;
+				}
+				& .shopping_cart_count {
+					width: 32%;
+				}
+				& .shopping_cart_price {
+					width: 25%;
+				}
+				& .shpping_cart_delete {
+					margin-left: 3%;
+					width: 10%;
+				}
+			}
+			// 장바구니 리스트 
+			& .shopping_cart_product_list {
+				width: 100%;
+				height: 650px;
+				overflow: auto;
+				& .shopping_product_check_content {
+						width: 100%;
+						height: 60px;
+						border-bottom: 1px solid #ccc;
+						& .product_number_p , .product_number_m {
+							cursor: pointer;
+						}
+						& .product_number {
+							width: 43px;
+							height: 40px;
+						//	outline: 1px solid #ccc;
+							float: left;
+							margin-left: 5px;
+							margin-top: 10px;
+							text-align: center;
+							line-height: 37px;
+							font-size: 20px;
+						}
+						& .product_number:hover {
+							color: red;
+						}
+						& .shopping_product_check_content_size {
+							width: 130px;
+							height: 40px;
+						//	outline: 1px solid #ccc;
+							text-align: center;
+							line-height: 37px;
+							margin: 10px 0px;
+							float: left;
+						}
+						& .cart_value {
+							float: left;
+							width: 100px;
+							height: 100%;
+							text-align: right;
+							margin-left: 10px;
+							line-height: 55px;
+							font-size: 22px;
+						}
+						& .box_value_won {
+							float: left;
+							width: 45px;
+							height: 100%;
+							line-height: 55px;
+						}
+						& .remove_btn {
+							float: left;
+							width: 50px;
+							height: 100%;
+							line-height: 55px;
+							text-align: center;
+							cursor: pointer;
+							font-size: 20px;
+						}
+						& .remove_btn:hover {
+							color: red;
+						}
+					}
+			}
+			// 장바구니 총 금액
+			& .shopping_cart_total_price {
+				height: 60px;
+				@include font(2em,black);
+				text-align: center;
+				margin-right: 0px;
+			}
+			// 장바구니 구매하기
+			& .shopping_cart_purchase {
+				width: 200px;
+				height: 50px;
+				margin-left: 280px;
+				text-align: center;
+				line-height: 48px;
+				cursor: pointer;
+				@include font(1.2em,white);
+				background-color: #525252;
+			}
+			// 
+		}// 장바구니	
+		// 장바구니 팝업창	
+		& .shopping_cart_popup {
+			position: absolute;
+			top: 200px;
+			left: 50%;
+			margin-left: -300px;
+			width: 600px;
+			height: 400px;
+			border-radius: 20px;
+			background-color: white;
+			box-shadow: 2px 2px 15px 2px black;
+			text-align: center;
+			line-height: 380px;
+			display: none;
+			@include font(1.5em,black);
+		}	
+	}//article
+}// section

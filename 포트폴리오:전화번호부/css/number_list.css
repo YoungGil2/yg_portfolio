@@ -1,0 +1,280 @@
+* {
+  margin: 0px;
+  padding: 0px; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #303030; }
+
+body {
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  font-family: 'Noto Sans KR', sans-serif; }
+
+.top_menu {
+  width: 100%;
+  height: 60px; }
+  .top_menu .admin_information {
+    width: 20%;
+    height: 100%;
+    margin-top: 30px;
+    margin-left: 75%;
+    font-size: 20px;
+    color: white; }
+    .top_menu .admin_information .logout_button {
+      display: inline-block;
+      width: 130px;
+      height: 30px;
+      margin-top: 10px;
+      background-color: white;
+      text-align: center;
+      line-height: 28px; }
+    .top_menu .admin_information .add_button {
+      display: inline-block;
+      width: 130px;
+      height: 30px;
+      background-color: white;
+      text-align: center;
+      line-height: 28px;
+      margin-left: 5px; }
+
+.search_box {
+  width: 400px;
+  margin-top: -60px;
+  margin-left: 50px; }
+  .search_box .search_box_title {
+    width: 100%;
+    font-size: 20px;
+    color: white; }
+  .search_box .member_search {
+    width: 150px;
+    height: 30px;
+    text-align: center; }
+  .search_box .member_search_content {
+    width: 150px;
+    height: 30px; }
+  .search_box .memeber_search_start {
+    width: 50px;
+    height: 30px; }
+
+.folder_box {
+  width: 65%;
+  margin-top: 76px;
+  margin-left: 50px;
+  border-radius: 8px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 2px black; }
+  .folder_box .folder_box_top_manu {
+    width: 100%;
+    height: 50px;
+    background-color: #f5f5f5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
+    .folder_box .folder_box_top_manu .folder_title {
+      display: inline-block;
+      width: 150px;
+      height: 100%;
+      margin-left: 20px;
+      font-size: 20px;
+      color: black; }
+    .folder_box .folder_box_top_manu .folder_close_button {
+      display: inline-block;
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      background-color: #f2b2b2;
+      cursor: pointer;
+      margin-top: 7px;
+      margin-left: 10px; }
+    .folder_box .folder_box_top_manu .folder_close_button:hover {
+      background-color: #ef7a7a; }
+  .folder_box .title_list {
+    width: 100%;
+    height: 30px;
+    background-color: #f5f5f5; }
+
+.folder_content {
+  width: 100%;
+  height: 90%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: auto; }
+
+.title_list {
+  width: 100%;
+  height: 5%;
+  text-align: center;
+  font-size: 15px;
+  line-height: 27px;
+  background-color: #f5f5f5; }
+  .title_list li {
+    height: 100%;
+    float: left; }
+  .title_list li:first-child {
+    width: 4%; }
+  .title_list li:nth-child(2) {
+    width: 4%; }
+  .title_list li:nth-child(3) {
+    width: 4%; }
+  .title_list li:nth-child(4) {
+    width: 12%; }
+  .title_list li:nth-child(5) {
+    width: 12%; }
+  .title_list li:nth-child(6) {
+    width: 5%; }
+  .title_list li:nth-child(7) {
+    width: 15%; }
+  .title_list li:nth-child(8) {
+    width: 11%; }
+  .title_list li:nth-child(9) {
+    width: 18%; }
+  .title_list li:nth-child(10) {
+    width: 5%; }
+  .title_list .user_info {
+    width: 100px;
+    text-align: center;
+    cursor: pointer; }
+  .title_list .user_info:hover {
+    color: red; }
+
+.number_list {
+  width: 100%;
+  height: 25px;
+  line-height: 22px;
+  text-align: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid black;
+  font-size: 14px; }
+  .number_list li {
+    height: 100%;
+    float: left; }
+  .number_list li:first-child {
+    width: 4%; }
+  .number_list li:nth-child(2) {
+    width: 4%; }
+  .number_list li:nth-child(3) {
+    width: 4%; }
+  .number_list li:nth-child(4) {
+    width: 12%; }
+  .number_list li:nth-child(5) {
+    width: 12%; }
+  .number_list li:nth-child(6) {
+    width: 5%; }
+  .number_list li:nth-child(7) {
+    width: 15%; }
+  .number_list li:nth-child(8) {
+    width: 11%; }
+  .number_list li:nth-child(9) {
+    width: 18%; }
+  .number_list .record_delete_button:hover {
+    color: red;
+    cursor: pointer; }
+  .number_list .user_info {
+    cursor: pointer;
+    width: 100px;
+    text-align: center; }
+  .number_list .user_info:hover {
+    color: red; }
+
+.information_box {
+  width: 25%;
+  position: absolute;
+  margin-top: 76px;
+  right: 90px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 3px 3px 3px 2px black; }
+  .information_box .information_box_top_manu {
+    width: 100%;
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
+    .information_box .information_box_top_manu .information_close_button {
+      display: inline-block;
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      background-color: #f2b2b2;
+      cursor: pointer;
+      margin-top: 7px;
+      margin-left: 10px; }
+    .information_box .information_box_top_manu .information_close_button:hover {
+      background-color: #ef7a7a; }
+    .information_box .information_box_top_manu .information_title {
+      display: inline-block;
+      width: 150px;
+      height: 100%;
+      margin-left: 20px;
+      font-size: 20px;
+      color: black; }
+  .information_box .information_content .information_content_p {
+    font-size: 20px;
+    color: black;
+    text-indent: 30px; }
+
+.delete_check {
+  width: 600px;
+  height: 300px;
+  border-radius: 10px;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  margin-left: -300px;
+  z-index: 99;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px black;
+  display: none; }
+  .delete_check .delete_check_top_bar {
+    width: 100%;
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
+    .delete_check .delete_check_top_bar .delete_check_close_button {
+      display: inline-block;
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      background-color: #f2b2b2;
+      cursor: pointer;
+      margin-top: 7px;
+      margin-left: -560px; }
+    .delete_check .delete_check_top_bar .delete_check_close_button:hover {
+      background-color: #ef7a7a; }
+  .delete_check .delete_check_content {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    line-height: 140px;
+    font-size: 30px;
+    color: black; }
+  .delete_check .delete_check_button_box {
+    width: 100%;
+    height: 90px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #f5f5f5;
+    position: relative; }
+    .delete_check .delete_check_button_box .delete_check_button {
+      display: inline-block;
+      width: 100px;
+      height: 40px;
+      border-radius: 5px;
+      line-height: 36px;
+      margin-top: 20px;
+      text-align: center;
+      background-color: #5a585b;
+      position: absolute;
+      top: 0px;
+      left: 52%;
+      font-size: 16px;
+      color: white;
+      cursor: pointer; }
+    .delete_check .delete_check_button_box .yes_button {
+      margin-left: -130px; }
+
+/*# sourceMappingURL=number_list.css.map */

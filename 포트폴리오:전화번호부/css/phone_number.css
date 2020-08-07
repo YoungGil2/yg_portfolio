@@ -1,0 +1,64 @@
+* {
+  margin: 0px;
+  padding: 0px; }
+
+li {
+  list-style: none; }
+
+body {
+  background-image: url("../img/bg.jpg");
+  background-size: cover; }
+
+.admin_info {
+  font-family: 'Anton', sans-serif;
+  position: absolute;
+  top: 650px;
+  left: 440px;
+  color: black;
+  font-size: 40px; }
+
+.login_box {
+  width: 70%;
+  height: 700px;
+  margin: 80px auto; }
+  .login_box li {
+    width: 50%;
+    height: 100%;
+    float: left; }
+  .login_box li:first-child .title_box {
+    margin-top: 50px;
+    font-family: 'Anton', sans-serif; }
+    .login_box li:first-child .title_box h1 {
+      color: black;
+      font-size: 60px;
+      text-align: center;
+      letter-spacing: 1px; }
+    .login_box li:first-child .title_box p {
+      color: black;
+      font-size: 40px;
+      text-indent: 100px; }
+  .login_box li:first-child form {
+    width: 78%;
+    margin: 60px auto; }
+    .login_box li:first-child form p {
+      color: black;
+      font-size: 25px;
+      font-family: 'Anton', sans-serif; }
+    .login_box li:first-child form .login_input {
+      width: 460px;
+      height: 51px;
+      text-indent: 30px;
+      color: white;
+      font-size: 20px;
+      border: none;
+      border-bottom: 3px solid black;
+      background-color: transparent; }
+    .login_box li:first-child form .login_but {
+      width: 230px;
+      height: 51px;
+      margin-top: 30px;
+      border: none;
+      font-size: 20px;
+      background-color: #8679b7; }
+
+/*# sourceMappingURL=phone_number.css.map */

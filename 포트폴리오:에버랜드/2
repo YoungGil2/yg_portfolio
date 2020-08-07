@@ -1,0 +1,92 @@
+* {margin: 0px; padding: 0px;}
+li { list-style: none;}
+@mixin font_NS{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+@mixin font($color, $size) {
+	color : $color;
+	font-size: $size;
+}
+@mixin margin-LR($left,$right){
+	margin-left: $left;
+	margin-right: $right;
+}
+
+//헤더 
+header {
+	.main_menu {
+		width: 100%;
+		height: 60px;
+		position:absolute;
+		top: 0px;
+		left: 0px;
+		z-index: 30;
+		.main_menu_logo {
+			width: 12%;
+			height: 100%;
+			padding: 50px;
+			img {
+				width: 80%;
+				height: 80%;
+			}
+		}
+	}
+}
+//섹션
+section{
+	article{
+		width: 100%;
+		height: 970px;
+		position: relative;
+	}
+	// 아티클 1번 
+	.article_1 {
+		.article_1_bg {
+			width: 100%;
+			height: 100%;
+			li {
+				height: 100%;
+				float: left;
+			}
+			.article_1_bg_1 {
+				width: 30%;
+				background: {
+					image: url("./img/bg_logo.png");
+					repeat: no-repeat;
+				}
+				.article_1_title_box {
+					width: 900px;
+					height: 400px;
+					margin: 300px 300px;
+					border: 1px solid black;
+					z-index: 99;
+					.article_1_title_box_h1 {
+						@include font(black,120px);
+					}
+				}
+			}
+			.article_1_bg_2 {
+				width: 70%;
+				opacity: 0.9;
+				background: {
+					image: url("./img/ja_1.jpg");
+					size: cover;
+					position: 50% 50%;
+				}
+			}
+		}
+	}
+	// 아티클 2번
+	.article_2{
+		background-color: #FFF480;
+	}
+	// 아티클 3번
+	.article_3{
+		background-color: #80FF96;
+	}
+	// 아티클 4번
+	.article_4{
+		background-color: #EC8CFF;
+	}
+}
+
