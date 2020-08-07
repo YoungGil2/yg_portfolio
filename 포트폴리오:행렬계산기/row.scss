@@ -1,0 +1,171 @@
+* { margin: 0px; padding: 0px;}
+@mixin font($color,$size){
+	color: $color;
+	font-size: $size;
+}
+@mixin font_NS {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+@mixin font_AT{
+	font-family: 'Anton', sans-serif;
+}
+// 메인 박스 
+.main_box {
+	width: 100%;
+	position: relative;
+	margin: 20px auto;
+	// 메인 제목 
+	.main_title {
+		width: 20%;
+		margin: {
+			left: 40%;
+		}
+		text-align: center;
+	}
+	// 행렬 input 박스
+	.matrix_box {
+		width: 25%;
+		float: left;
+		margin: {
+			top: 10px;
+		}
+		text-align: center;
+		font-size: 17px;
+		font-family: 'Noto Sans KR', sans-serif;
+		input {
+			width: 100px;
+			height: 30px;
+			border: 3px solid #61D175;
+			background-color: #B6F3C1;
+			font-size: 17px;
+			text-align: center;
+		}
+	}
+	// 행열의 값입력
+	.first_matrix {
+		margin: {
+			left: 25%;
+		}
+	}
+	.result_bt_box {
+		width: 700px; 
+		margin: 0px auto;
+		text-align: center;
+		.result_bt {
+			width: 300px;
+			height: 50px;
+			@include font(black,17px);
+			margin:{ 
+				top: 50px;
+			}
+			border-radius: 5px;
+			background-color: #9FDFB4;
+			transition: all 0.5s;
+		}
+		.result_bt:hover {
+			background-color: #6ACD84;
+		}
+	}
+	//행렬 출력
+	.result_box {
+		width: 100%;
+		.result_box_div {
+			width: 50%;
+			float: left;
+			text-align: center;
+			.start_input {
+				width: 150px;
+				height: 50px;
+			}
+			input {
+				width: 50px;
+				height: 50px;
+				text-align: center;
+				@include font(black,17px);
+				border: 3px solid #61D175;
+			}
+		}
+	}
+	// 덧셈, 뺄셈, 곱셈 버튼
+	.but_box {
+		margin-top: 200px;
+	}
+	.result_bt_s {
+		margin:{
+		       top: 150px;
+		}
+		width: 10%;
+		height: 40px;
+		@include font(black,18px);
+		background-color: #9FDFB4;
+		transition: all 0.5s;
+		border-radius: 5px;
+	}
+	.result_bt_s:hover {
+		background-color: #6ACD84;
+	}
+	.result_bt_s_1 {
+		margin: {
+			left: 35%;
+		}
+	}
+	.error_box {
+		width: 500px;
+		height: 400px;
+		border: 3px solid #61D175;
+		border-radius: 30px;
+		position: absolute;
+		top: 100px;
+		left: 50%;
+		margin-left: -250px;
+		background-color: white;
+		display: none;
+		.error_title {
+			margin-top: 20px;
+			margin-left: 200px;
+			display: inline-block;
+			@include font(black,40px);
+			@include font_AT;
+		}
+		.error_message {
+			display: inline-block;
+			width: 450px;
+			margin:{
+				top: 10px;	
+				left: 25px;
+			}
+			@include font(black,20px);
+			@include font_NS;
+		}
+		.close_but {
+			width: 150px;
+			height: 40px;
+			border: 2px solid #61D175;
+			border-radius: 3px;
+			text-align: center;
+			line-height: 35px;
+			background-color: #9FDFB4;
+			cursor: pointer;
+			@include font(black,20px);
+			@include font_NS;
+			margin: {
+				top: 150px;
+				left: 175px;
+			}
+		}
+		.close_but:hover {
+			background-color: #6ACD84;
+		}
+	}
+}
+// 최종 결과 값 출력 
+.print_box {
+	width: 100%;
+	text-align: center;
+	input {
+		width: 45px;
+		height: 45px;
+		text-align: center;
+		border: 3px solid #61D175;
+	}
+}

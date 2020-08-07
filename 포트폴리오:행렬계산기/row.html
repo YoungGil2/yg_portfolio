@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>행렬 계산기</title>
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+		<link href="./row.css" rel="stylesheet" type="text/css">
+		<script src = "./row.js "></script>
+	</head>
+	<body>
+		<div class="main_box">
+			<header>
+				<h1 class="main_title">행렬 계산기</h1>
+			</header>
+			<section>
+				<article>
+					<div class="first_matrix matrix_box">
+						첫번째 행열 : <input id="length_X_1" type="number" placeholder="가로 열">
+						X
+						<input id="height_Y_1" type="number" placeholder="세로 열">
+					</div>
+					<div class="last_matrix matrix_box">
+						두번째 행열 : <input id="length_X_2" type="number" placeholder="가로 열"> 
+						X
+						<input id="height_Y_2" type="number" placeholder="세로 열">
+					</div>
+					<div class="result_bt_box">
+						<button id="result_bt" class="result_bt">행렬 출력버튼</button>	
+					</div>
+					<div class="result_box">
+						<div class="result_box_one result_box_div">
+							<div class="result_box_one_print result_box_print" id="result_box_one_row">
+								<input class="start_input" type="text" placeholder="첫번째 행렬">
+							</div>
+						</div>
+						<div class="result_box_two result_box_div">
+							<div class="result_box_two_print result_box_print" id="result_box_two_row">
+								<input class="start_input" type="text" placeholder="두번째 행렬">
+							</div>
+						</div>
+					</div>
+					<div class="but_box">
+						<button id="result_bt_plus" class="result_bt_s result_bt_s_1"> + 버튼</button>
+						<button id="result_bt_minus" class="result_bt_s result_bt_s_2"> - 버튼</button>
+						<button id="result_bt_multi" class="result_bt_s result_bt_s_3"> * 버튼</button>
+					</div>
+					<div id="error_box_1" class="error_box">
+						<span class="error_title">ERROR!</span><br>
+						<span class="error_message">곱하기는 첫번째 행렬에 열과 두번째 행렬에 행이 같아야 계산이 가능합니다.</span>
+						<div id="close_but" class="close_but">닫기</div>
+					</div>
+					<div id="error_box_2" class="error_box">
+						<span class="error_title">ERROR!</span><br>
+						<span class="error_message">더하기,빼기는 첫번째 행렬과 두번째 행렬에 행과 열에 개수가 같아야 계산이 가능합니다.</span>
+						<div id="close_but" class="close_but">닫기</div>
+					</div>
+				</article>
+			</section>
+		</div>
+		<div id="print_box" class="print_box"></div>
+	</body>
+</html>
